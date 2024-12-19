@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'font-endustri-manavgat';
+  font-display: auto;
+  src: url('../font/font-endustri-manavgat.eot?72054675');
+  src: url('../font/font-endustri-manavgat.eot?72054675#iefix') format('embedded-opentype'),
+       url('../font/font-endustri-manavgat.woff2?72054675') format('woff2'),
+       url('../font/font-endustri-manavgat.woff?72054675') format('woff'),
+       url('../font/font-endustri-manavgat.ttf?72054675') format('truetype'),
+       url('../font/font-endustri-manavgat.svg?72054675#font-endustri-manavgat') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'font-endustri-manavgat';
+    src: url('../font/font-endustri-manavgat.svg?72054675#font-endustri-manavgat') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "font-endustri-manavgat";
+  font-display: auto;
+  font-style: normal;
+  font-weight: normal;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  font-size: 25px;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-book-list:before { content: '\e800'; } /* '' */
+.icon-book-add:before { content: '\e801'; } /* '' */
+.icon-kontrol:before { content: '\e802'; } /* '' */
+.icon-entry:before { content: '\e803'; } /* '' */
+.icon-logout:before { content: '\e804'; } /* '' */
+.icon-menu:before { content: '\f008'; } /* '' */
+.icon-st-list:before { content: '\f2ba'; } /* '' */
+.icon-st-add:before { content: '\f2bc'; } /* '' */

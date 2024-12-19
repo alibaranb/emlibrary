@@ -1,0 +1,135 @@
+/*! Pushy - v1.2.0 - 2019-4-24
+* Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
+* https://github.com/christophery/pushy/
+* by Christopher Yee */
+/* Menu Appearance */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #435165;
+  overflow-x: hidden;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table td, .table th {
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 992px) {
+  .aramakutu {
+    width: 100% !important;
+  }
+}
+
+.pushy {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  top: 0;
+  z-index: 9999;
+  background: #191918;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  /* enables momentum scrolling in iOS overflow elements */
+}
+.pushy a {
+  display: block;
+  color: #b3b3b1;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+}
+.pushy a:hover {
+  color: #FFF;
+}
+.pushy ul:first-child {
+  margin-top: 10px;
+  list-style: none;
+  padding: 0;
+}
+.pushy.pushy-left {
+  left: 0;
+}
+
+.pushy-content {
+  visibility: hidden;
+}
+
+.menu-btn {
+  width: 25px;
+  height: 25px;
+}
+
+/* Menu Movement */
+.pushy-left {
+  -webkit-transform: translate3d(-200px, 0, 0);
+  -ms-transform: translate3d(-200px, 0, 0);
+  transform: translate3d(-200px, 0, 0);
+}
+
+.pushy-open-left #container,
+.pushy-open-left .push {
+  -webkit-transform: translate3d(200px, 0, 0);
+  -ms-transform: translate3d(200px, 0, 0);
+  transform: translate3d(200px, 0, 0);
+}
+
+.pushy-open-left .pushy {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.pushy-open-left .pushy-content {
+  visibility: visible;
+}
+
+/* Menu Transitions */
+#container,
+.pushy,
+.push {
+  transition: transform .4s cubic-bezier(.25,.46,.45,.94),ease background .5s;
+  -webkit-transition: -webkit-transform .4s cubic-bezier(.25,.46,.45,.94),ease background .5s;
+}
+
+.pushy-content {
+  transition: visibility 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+}
+
+/* Site Overlay */
+.site-overlay {
+  display: none;
+}
+
+.pushy-open-left .site-overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9998;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-animation: fade 500ms;
+  animation: fade 500ms;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=pushy.css.map */
